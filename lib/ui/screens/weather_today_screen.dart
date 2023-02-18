@@ -95,9 +95,10 @@ class _WeatherTodayColumn extends StatelessWidget {
   const _WeatherTodayColumn({Key? key, required this.state}) : super(key: key);
 
   String conditionRu(String condition) {
-    for (var i = 0; Constant.conditions.length > i; i++) {
-      if (condition == Constant.conditions.keys.toList()[i]) {
-        return Constant.conditions.values.toList()[i];
+    const conditions = Constant.conditions;
+    for (var i = 0; conditions.length > i; i++) {
+      if (condition == conditions.keys.toList()[i]) {
+        return conditions.values.toList()[i];
       }
     }
     return condition;
